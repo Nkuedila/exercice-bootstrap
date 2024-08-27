@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exercice.css" />
+
+    <title>bootstrap exercice</title>
+  </head>
+  <body>
+    <button id="button1">Clique-moi</button>
+    <fieldset>
+      <legend>Coordonnées</legend>
+      <label for="Nom">NOM:</label>
+      <input type="text" name="nom" id="?" /><br />
+      <label for="Email">Email:</label>
+      <input type="text" name="Email" /><br />
+      <label for="date">Date de naissance</label>
+      <input type="date" name="ddn" id="date" />
+    </fieldset>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Toggler/collapsible Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tableau.html">Tableau</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="formulaire.php">Formulaire wazaa</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <form name="frmChoix">
+      <input type="radio" name="btnRadChoix" value="semaine" checked /> Semaine
+      <br />
+      <input type="radio" name="btnRadChoix" value="week end" /> Week-end
+      <br />
+      <input type="button" name="btn" value="Choix" onclick="testerRadio();" />
+      <br />
+      <input id="txtBox1" type="text" name="txtChoix" value="" />
+    </form>
+    <script>
+      document.querySelector("#button1").onclick = function () {
+        alert("mokolo elamu !");
+      };
+      function testerRadio() {
+        var radio = document.getElementsByName("btnRadChoix");
+
+        for (var i = 0; i < radio.length; i++) {
+          if (radio[i].checked) {
+            document.getElementById("txtBox1").value = radio[i].value;
+          }
+        }
+      }
+
+      console.log("Table de multiplication par 5");
+      console.log("=============================");
+
+      for (i = 0; i <= 10; i++) {
+        resultat = 5 * i;
+
+        console.log("5 * " + i + " = " + resultat);
+      }
+
+      // instructions exécutées après le for (i vaut 10)
+      console.log("fin de la boucle");
+    </script>
+
+    <footer>
+      <p>&copy; 2024 LDJM PARIS/FRANCE All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
